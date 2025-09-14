@@ -4,8 +4,6 @@ This repository contains MATLAB code accompanying our paper:
 
 **[Tensor Forms of Derivatives of Matrices and their applications in the Solutions to Differential Equations](https://doi.org/10.48550/arXiv.2509.08429)**
 
-*Yiran Xu, Guangbin Wang, Changqing Xu*
-
 ## Abstract
 
 This work presents novel tensor-based approaches for computing derivatives of matrices and their applications to solving partial differential equations (PDEs). We develop efficient algorithms for handling high-order tensor operations and demonstrate their effectiveness through Tucker decomposition and Galerkin projection methods.
