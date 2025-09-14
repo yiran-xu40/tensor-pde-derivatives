@@ -1,14 +1,42 @@
 cff-version: 1.2.0
-message: "If you use this code, please cite the associated paper."
-title: "Tensor Forms of Derivatives of Matrices and their applications in the Solutions to Differential Equations"
+message: "If you use this software, please cite it using the metadata from this file."
+type: software
+title: "Tensor Forms of Derivatives of Matrices and PDE Applications"
+abstract: "MATLAB implementation of tensor-based methods for computing matrix derivatives and solving partial differential equations using Tucker decomposition and Galerkin projection techniques."
 authors:
-  - family-names: Xu
-    given-names: Yiran
-  - family-names: Wang
-    given-names: Guangbin
-  - family-names: Xu
-    given-names: Changqing
+  - family-names: "Xu"
+    given-names: "Yiran"
+  - family-names: "Wang" 
+    given-names: "Guangbin"
+  - family-names: "Xu"
+    given-names: "Changqing"
 version: "1.0.0"
 doi: "10.48550/arXiv.2509.08429"
-date-released: "2025-09-10"
-repository-code: "https://github.com/your-org/tensor-pde-derivatives"
+date-released: "2024-09-15"
+url: "https://github.com/your-username/tensor-pde-derivatives"
+repository-code: "https://github.com/your-username/tensor-pde-derivatives"
+license: MIT
+keywords:
+  - "tensor analysis"
+  - "matrix derivatives"  
+  - "partial differential equations"
+  - "Tucker decomposition"
+  - "Galerkin projection"
+  - "MATLAB"
+  - "numerical analysis"
+references:
+  - type: article
+    title: "Tensor Forms of Derivatives of Matrices and their applications in the Solutions to Differential Equations"
+    authors:
+      - family-names: "Xu"
+        given-names: "Yiran"
+      - family-names: "Wang"
+        given-names: "Guangbin" 
+      - family-names: "Xu"
+        given-names: "Changqing"
+    year: 2024
+    url: "https://arxiv.org/abs/2509.08429"
+    repository: "arXiv"
+    identifiers:
+      - type: "arxiv"
+        value: "2509.08429"
