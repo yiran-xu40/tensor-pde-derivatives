@@ -61,17 +61,17 @@ git clone https://github.com/tensortoolbox/tensortoolbox.git tensor_toolbox-v3.6
 
 ```
 tensor-pde-derivatives/
-├── README.md                           
-├── LICENSE                               
-├── CITATION.cff                        
-├── setup.m                             
-├── run_all_tests.m                     
-├── scripts/                            
-│   ├── run_listing1_demo.m            
-│   └── reproduce_paper_example.m      
-├── src/                                
-│   ├── gen6ordersparsetensor.m        
-│   ├── tucker_reduce_modes56.m        
+├── README.md                         
+├── LICENSE                             
+├── CITATION.cff                      
+├── setup.m                           
+├── run_all_tests.m                   
+├── scripts/                          
+│   ├── run_listing1_demo.m          
+│   └── reproduce_paper_example.m    
+├── src/                              
+│   ├── gen6ordersparsetensor.m      
+│   ├── tucker_reduce_modes56.m      
 │   ├── build_reduced_operator.m       % Galerkin projection operator construction
 │   ├── integrate_reduced_system.m     % Time integration in reduced space
 │   ├── reconstruct_full_state.m       % Solution reconstruction to full space
@@ -95,6 +95,7 @@ A ≈ G ×5 U5 ×6 U6
 ```
 
 where:
+
 - G is the core tensor of size [6,6,6,6,3,3]
 - U5, U6 are orthogonal factor matrices of sizes [6×3] each
 - Modes 1-4 remain uncompressed, modes 5-6 are reduced from rank 6 to rank 3
@@ -108,6 +109,7 @@ R = Phi^T * A_eff * Phi
 ```
 
 where:
+
 - Phi = U6 ⊗ U5 is the Kronecker product projection operator [36×9]
 - A_eff is the aggregated effective operator derived from the core tensor
 - R is the final reduced operator [9×9]
