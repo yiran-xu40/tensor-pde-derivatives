@@ -17,11 +17,15 @@ jobs:
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v2
 
+      - name: Install Tensor Toolbox for MATLAB
+        run: |
+          git clone https://github.com/tensortoolbox/tensortoolbox.git
+          matlab -batch "addpath(genpath('tensortoolbox')); savepath"
+
       - name: Run MATLAB tests
         uses: matlab-actions/run-tests@v2
         with:
           source-folder: src
-          test-folder: tests
 
   octave-tests:
     name: Octave Fallback Tests
@@ -30,8 +34,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install Octave
-        run: sudo apt-get update && sudo apt-get install -y octave
+      - name: Install Octave and dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y octave liboctave-dev
+          octave --eval "pkg install -forge io; pkg install -forge statistics"
+
+      - name: Install Tensor Toolbox for Octave
+        run: |
+          git clone https://github.com/tensortoolbox/tensortoolbox.git
+          octave --eval "addpath(genpath('tensortoolbox')); savepath"
 
       - name: Run Octave tests
         run: |
