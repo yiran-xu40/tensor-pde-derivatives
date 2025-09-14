@@ -1,0 +1,38 @@
+name: MATLAB and Octave CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  matlab-tests:
+    name: MATLAB Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up MATLAB
+        uses: matlab-actions/setup-matlab@v2
+
+      - name: Run MATLAB tests
+        uses: matlab-actions/run-tests@v2
+        with:
+          source-folder: src
+          test-folder: tests
+
+  octave-tests:
+    name: Octave Fallback Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Octave
+        run: sudo apt-get update && sudo apt-get install -y octave
+
+      - name: Run Octave tests
+        run: |
+          octave --eval "addpath(genpath('src')); addpath(genpath('tests')); test_deps_and_shapes; test_reduction_pipeline; test_time_integrator;"
