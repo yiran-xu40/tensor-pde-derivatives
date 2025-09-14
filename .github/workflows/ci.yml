@@ -26,6 +26,7 @@ jobs:
         uses: matlab-actions/run-tests@v2
         with:
           source-folder: src
+          test-folder: tests
 
   octave-tests:
     name: Octave Fallback Tests
