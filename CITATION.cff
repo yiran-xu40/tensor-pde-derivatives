@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated paper."
+title: "Tensor Forms of Derivatives of Matrices and their applications in the Solutions to Differential Equations"
+authors:
+  - family-names: Xu
+    given-names: Yiran
+  - family-names: Wang
+    given-names: Guangbin
+  - family-names: Xu
+    given-names: Changqing
+version: "1.0.0"
+date-released: "2025-09-10"
+repository-code: "https://github.com/your-org/tensor-pde-derivatives"
