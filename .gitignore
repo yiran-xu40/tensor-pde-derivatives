@@ -4,7 +4,7 @@
 #Log files
 .DS_Store
 
-
+.github/*
 
 # C extensions
 *.so
