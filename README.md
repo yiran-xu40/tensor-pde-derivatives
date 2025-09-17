@@ -6,7 +6,7 @@ This repository contains MATLAB code accompanying our paper:
 
 ## Abstract
 
-This work presents novel tensor-based approaches for computing derivatives of matrices and their applications to solving partial differential equations (PDEs). We develop efficient algorithms for handling high-order tensor operations and demonstrate their effectiveness through Tucker decomposition and Galerkin projection methods.
+This work presents novel tensor-based approaches for computing derivatives of matrices and their applications to solving differential equations (ODEs and PDEs). We develop efficient algorithms for handling high-order tensor operations and demonstrate their effectiveness through Tucker decomposition and Galerkin projection methods.
 
 ## Key Features
 
@@ -28,18 +28,6 @@ The code implements the theoretical developments from our paper:
 - **Section 5**: PDE applications and numerical examples
 - **MATLAB Listing**: Complete implementation example
 
-## Quick Start
-
-```matlab
-% Initialize and test the environment
-setup()                    % Initialize environment and verify dependencies
-run_all_tests()           % Run complete test suite (recommended first step)
-
-% Run demonstrations
-run_listing1_demo()        % Run main demonstration
-reproduce_paper_example()  % Exact paper listing reproduction
-```
-
 ## Installation Requirements
 
 - **MATLAB R2021a+** (R2021b or later recommended)
@@ -57,21 +45,33 @@ git clone https://github.com/tensortoolbox/tensortoolbox.git tensor_toolbox-v3.6
 
 **Note**: The setup() function will automatically detect and configure the Tensor Toolbox if placed in the repository root directory.
 
-## Repository Structure
+## Quick Start
+
+```matlab
+% Initialize and test the environment
+setup()                    % Initialize environment and verify dependencies
+run_all_tests()           % Run complete test suite (recommended first step)
+
+% Run demonstrations
+run_listing1_demo()        % Run main demonstration
+reproduce_paper_example()  % Exact paper listing reproduction
+```
+
+### Repository Structure
 
 ```
 tensor-pde-derivatives/
-├── README.md                         
-├── LICENSE                             
-├── CITATION.cff                      
-├── setup.m                           
-├── run_all_tests.m                   
-├── scripts/                          
-│   ├── run_listing1_demo.m          
-│   └── reproduce_paper_example.m    
-├── src/                              
-│   ├── gen6ordersparsetensor.m      
-│   ├── tucker_reduce_modes56.m      
+├── README.md                     
+├── LICENSE                         
+├── CITATION.cff                  
+├── setup.m                       
+├── run_all_tests.m               
+├── scripts/                      
+│   ├── run_listing1_demo.m      
+│   └── reproduce_paper_example.m  
+├── src/                          
+│   ├── gen6ordersparsetensor.m  
+│   ├── tucker_reduce_modes56.m  
 │   ├── build_reduced_operator.m       % Galerkin projection operator construction
 │   ├── integrate_reduced_system.m     % Time integration in reduced space
 │   ├── reconstruct_full_state.m       % Solution reconstruction to full space
@@ -157,7 +157,7 @@ fix_rng(20250910);  % Based on paper submission date
 3. **High reconstruction errors**: Normal for sparse tensors; errors ~100% are typical
 4. **Integration instability**: Reduce time step or check operator conditioning
 
-### Error Messages
+### Possible Error Feedbacks
 
 - `Incorrect dimensions for matrix multiplication`: Usually indicates Tensor Toolbox version compatibility issues
 - `tucker_als convergence warning`: Normal; algorithm stops at local minimum
@@ -182,13 +182,6 @@ If you use this code in your research, please cite our paper:
 ## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
-
-## Support and Contributing
-
-- **Issues**: Report bugs via GitHub Issues
-- **Questions**: Contact authors for research-related questions
-- **Documentation**: Full theoretical details in arXiv:2509.08429
-- **Contributing**: Pull requests welcome for improvements and bug fixes
 
 ## Dependencies and Acknowledgments
 

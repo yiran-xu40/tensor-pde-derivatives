@@ -8,7 +8,6 @@ function setup()
 
 fprintf('\n=== TENSOR PDE DERIVATIVES - ENVIRONMENT SETUP ===\n');
 
-% Get current directory
 this = fileparts(mfilename('fullpath'));
 fprintf('[setup] Repository root: %s\n', this);
 
